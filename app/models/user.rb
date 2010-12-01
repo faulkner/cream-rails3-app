@@ -6,7 +6,7 @@ class User
   include Roles::MongoMapper 
   strategy :admin_flag, :default
 
-  valid_roles_are :admin, :guest         
+  valid_roles_are Cream.roles#:admin, :guest         
 
 # Validations :::::::::::::::::::::::::::::::::::::::::::::::::::::
 # validates_presence_of :attribute

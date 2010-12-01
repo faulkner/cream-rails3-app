@@ -13,9 +13,10 @@
   <tr>
     <td><%= post.title %></td>
     <td><%= post.body %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    <td><%= show_link post %></td>
+    <td><%= edit_link post %></td>
+    <td><%= delete_link post %></td>
   </tr>
 <% end %>
 </table>

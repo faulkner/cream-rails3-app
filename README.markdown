@@ -2,9 +2,12 @@
 
 This app will be the template for the design of the Cream *config* generator.
 
-## Status: Sept. 25, 2010
+## Status: Dec 1, 2010
 
-The gems which this project rely on have all been updated and released. So it should work!
+Cream, CanCan-Permits and some of the other gems have since minor or major upgraded since this app was created. 
+Please take a look at [cream-app](http://github.com/kristianmandrup/cream-app), the new Demo app for the latest version of Cream. 
+
+Most of the manual steps below are no longer necessary as the generators in the latest Cream automatically configures most if not all of this.
 
 ## Steps 
 
@@ -29,21 +32,23 @@ Or in existing app, edit 'config/application.rb'
   require "rails/test_unit/railtie"  
 </pre>
 
+It should also be possible to setup using the *mongoid:configure* generator that comes with mongoid.
+
 ## Configure gemfile
    
 in *Gemfile* insert:
 
 <pre>
-  gem 'cream',        '~> 0.5.5' 
+  gem 'cream',        '~> 0.6.2' 
   gem 'devise',       '~> 1.2.0' 
 
   # use mongo mapper version of devise
-  gem 'mm-devise',    '~> 1.1.3'
+  gem 'mm-devise',    '~> 1.1.6'
 
   # gem "mongo_mapper"
 
   # use mongo mapper version of roles
-  gem 'roles_mongo_mapper',    '~> 0.1.2'
+  gem 'roles_mongo_mapper',    '~> 0.1.3'
   
 </pre>
 
